@@ -11,22 +11,10 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^5.4.0",
-    "@astrojs/react": "^3.6.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/typography": "^0.5.13",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "netlify-cli": "^17.33.3",
-    "postcss": "^8.4.38",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.3"
+    "@astrojs/netlify": "^6.0.0"
   },
   "dependencies": {
-    "astro": "^4.12.1",
-    "sharp": "^0.33.3"
+    "astro": "5.0.5"
   },
-  "packageManager": "pnpm@9.5.0"
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
 }
