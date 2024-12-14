@@ -1,5 +1,7 @@
 # Reproduce issue astro custom edge middleware on netlify
 
+Ref issue: https://github.com/withastro/adapters/issues/483
+
 > [!IMPORTANT]  
 > No point to run this locally as the issue appears on netlify infrastructure.
 
