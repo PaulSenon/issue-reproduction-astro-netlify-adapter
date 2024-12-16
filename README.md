@@ -8,3 +8,7 @@ Ref issue: https://github.com/withastro/adapters/issues/483
 To reproduce, simply fork this repo and deploy it on netlify.
 
 Then go to the home page and see.
+
+## UPDATE (reopen)
+
+the patch from here: <https://github.com/withastro/adapters/pull/481> is solving the edge error but custom edge function locals are still ignored.
