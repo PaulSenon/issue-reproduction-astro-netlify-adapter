@@ -5,11 +5,15 @@ export const prerender = false;
 
 // delay 500 ms to make it obvious it's server rendered
 await new Promise((resolve) => setTimeout(resolve, 500));
+const random = Math.random() * 1000;
 ---
 
 <div class="border">
-  <h2>COMPONENT</h2>
-  <p>I am a ssr component and The following content is a server-island</p>
+  <h2>I AM A COMPONENT</h2>
+  <p>
+    I am a component, if this value does not change I am ssg: <strong
+      >{random}</strong>
+  </p>
   <MyServerIsland server:defer>
     <p slot="fallback">loading...</p>
   </MyServerIsland>
