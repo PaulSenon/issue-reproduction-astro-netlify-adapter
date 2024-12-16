@@ -1,4 +1,4 @@
-import { defineMiddleware, createContext } from "astro/middleware";
+import { defineMiddleware } from "astro/middleware";
 
 export const onRequest = defineMiddleware(async (context, next) => {
     console.log('Hi From Custom Middleware');
