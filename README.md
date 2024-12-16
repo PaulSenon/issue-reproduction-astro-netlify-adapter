@@ -6,4 +6,4 @@
 Therefor we get 404 on server-island endpoint because they don't exist :(
 Try here:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/PaulSenon/issue-reproduction-astro-netlify-adapter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/PaulSenon/issue-reproduction-astro-netlify-adapter/tree/astro-static-issue)
