@@ -2,6 +2,9 @@
 import MyServerIsland from "./MyServerIsland.astro";
 
 export const prerender = false;
+
+// delay 500 ms to make it obvious it's server rendered
+await new Promise((resolve) => setTimeout(resolve, 500));
 ---
 
 <div class="border">
