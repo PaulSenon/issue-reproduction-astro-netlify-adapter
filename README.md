@@ -1,13 +1,9 @@
-# Reproduce issue astro custom edge middleware on netlify
+# Reproduce issue where astro is not detecting a project as output `server` when the only ssr things are in `server-island`
 
 > [!IMPORTANT]  
-> No point to run this locally as the issue appears on netlify infrastructure.
+> To reproduce, clone this and `pnpm run build`, you will see that as long a you're not uncommenting the export prerender line in `src/pages/workaround.astro` this is not building the ssr endpoints.
 
-To reproduce, simply fork this repo and deploy it on netlify.
+Therefor we get 404 on server-island endpoint because they don't exist :(
+Try here:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/PaulSenon/issue-reproduction-astro-netlify-adapter)
-
-Then go to the home page and see.
-
-> [!IMPORTANT]  
-> The fix is already applied with a local pnpm patch to @astrojs/netlify adapter in addition to the half working patch from <https://github.com/withastro/adapters/pull/481>
