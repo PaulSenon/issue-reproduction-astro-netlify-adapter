@@ -2,7 +2,7 @@
 import MyDynamicComponent from "../components/MyDynamicComponent.astro";
 import MyServerIsland from "../components/MyServerIsland.astro";
 
-export const prerender = false;
+// export const prerender = false;
 
 // Astro.response.headers.set(
 //   "CDN-Cache-Control",
@@ -28,7 +28,8 @@ const { myLocal = "MISSING CUSTOM LOCAL" } = Astro.locals;
     </p>
     <p>
       here is a the custom middleware local (should not change because ssg): <strong
-        >{myLocal}</strong>
+        >{myLocal}</strong
+      >
     </p>
     <br />
     <MyServerIsland server:defer>
