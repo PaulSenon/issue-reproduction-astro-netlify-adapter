@@ -10,7 +10,8 @@ const { myLocal = "ERROR! The custom middleware local is missing..." } =
 const { requestId } = Astro.locals.netlify.context;
 ---
 
-<div>
+<div class="border">
+  <h2>SSR SERVER ISLAND</h2>
   <p>
     This component is server rendered and the two following value should change
     for each refresh
@@ -26,3 +27,10 @@ const { requestId } = Astro.locals.netlify.context;
     >
   </p>
 </div>
+
+<style>
+  .border {
+    padding: 10px;
+    border: 1px solid black;
+  }
+</style>

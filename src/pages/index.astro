@@ -1,5 +1,6 @@
 ---
-import Test from "../components/Test.astro";
+import MyDynamicComponent from "../components/MyDynamicComponent.astro";
+import MyServerIsland from "../components/MyServerIsland.astro";
 
 export const prerender = false;
 
@@ -17,15 +18,25 @@ const random = Math.random() * 1000;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="border">
+    <h2>SSG STATIC PAGE</h2>
     <p>
       This is a static page (following value should never change): <strong
         >{random}</strong
       >
     </p>
     <br />
-    <Test server:defer>
+    <MyServerIsland server:defer>
       <p slot="fallback">loading...</p>
-    </Test>
+    </MyServerIsland>
+    <br />
+    <MyDynamicComponent />
   </body>
 </html>
+
+<style>
+  .border {
+    padding: 10px;
+    border: 1px solid black;
+  }
+</style>

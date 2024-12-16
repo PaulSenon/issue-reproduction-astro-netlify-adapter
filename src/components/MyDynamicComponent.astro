@@ -1,0 +1,20 @@
+---
+import MyServerIsland from "./MyServerIsland.astro";
+
+export const prerender = false;
+---
+
+<div class="border">
+  <h2>COMPONENT</h2>
+  <p>I am a ssr component and The following content is a server-island</p>
+  <MyServerIsland server:defer>
+    <p slot="fallback">loading...</p>
+  </MyServerIsland>
+</div>
+
+<style>
+  .border {
+    padding: 10px;
+    border: solid 1px black;
+  }
+</style>
