@@ -7,6 +7,8 @@ Ref issue: https://github.com/withastro/adapters/issues/483
 
 To reproduce, simply fork this repo and deploy it on netlify.
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/PaulSenon/issue-reproduction-astro-netlify-adapter)
+
 Then go to the home page and see.
 
 ## UPDATE (reopen)
