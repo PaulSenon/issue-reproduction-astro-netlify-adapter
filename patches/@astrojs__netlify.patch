@@ -1,5 +1,5 @@
 diff --git a/dist/index.js b/dist/index.js
-index ba566d95956789a83721f4b36796325c603a7923..1e7e4d564e1fba99f58a516b5e6741f981f14b0e 100644
+index ba566d95956789a83721f4b36796325c603a7923..45e5372bdefa4c9723cead7cf9972e9d27dc1fbb 100644
 --- a/dist/index.js
 +++ b/dist/index.js
 @@ -175,7 +175,7 @@ export default function netlifyIntegration(integrationConfig) {
@@ -11,3 +11,14 @@ index ba566d95956789a83721f4b36796325c603a7923..1e7e4d564e1fba99f58a516b5e6741f9
  				// https://docs.netlify.com/edge-functions/api/#return-a-rewrite
  				ctx.rewrite = (target) => {
  					if(target instanceof Request) {
+@@ -197,7 +197,10 @@ export default function netlifyIntegration(integrationConfig) {
+ 				};
+ 				const next = () => {
+ 					const { netlify, ...otherLocals } = ctx.locals;
++                    console.log('OTHER LOCALS FROM NETLIFY EDGE RUNNER 1:', {...otherLocals});
++                    console.log('OTHER LOCALS FROM NETLIFY EDGE RUNNER 2:', ctx.locals);
+ 					request.headers.set("x-astro-locals", trySerializeLocals(otherLocals));
++                    console.log('CUSTOM LOCALS HEADER SET BY NETLIFY EDGE RUNNER:', request.headers.get("x-astro-locals"));
+ 					request.headers.set("x-astro-middleware-secret", "${middlewareSecret}");
+ 					return context.next();
+ 				};

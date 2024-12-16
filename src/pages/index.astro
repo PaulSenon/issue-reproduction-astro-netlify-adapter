@@ -1,5 +1,4 @@
 ---
-import MyDynamicComponent from "../components/MyDynamicComponent.astro";
 import MyServerIsland from "../components/MyServerIsland.astro";
 
 // export const prerender = false;
@@ -36,7 +35,6 @@ const { myLocal = "MISSING CUSTOM LOCAL" } = Astro.locals;
       <p slot="fallback">loading...</p>
     </MyServerIsland>
     <br />
-    <MyDynamicComponent />
   </body>
 </html>
 
