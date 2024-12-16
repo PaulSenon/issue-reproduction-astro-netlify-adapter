@@ -10,7 +10,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const response = await next();
     
     // Add our custom header
-    response.headers.set('X-Test-Value', Date.now().toLocaleString());
+    response.headers.set('X-My-Middleware-Header', new Date().toISOString());
     
     return response;
 }) 
