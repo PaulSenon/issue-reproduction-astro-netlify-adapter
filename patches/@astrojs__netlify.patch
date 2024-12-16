@@ -1,5 +1,5 @@
 diff --git a/dist/index.js b/dist/index.js
-index ba566d95956789a83721f4b36796325c603a7923..355eeb630129b880775c2368f9939819edfd4800 100644
+index ba566d95956789a83721f4b36796325c603a7923..10bdc3a6da7cb73376f52152bf5d1d5753d787cd 100644
 --- a/dist/index.js
 +++ b/dist/index.js
 @@ -173,9 +173,9 @@ export default function netlifyIntegration(integrationConfig) {
@@ -8,7 +8,7 @@ index ba566d95956789a83721f4b36796325c603a7923..355eeb630129b880775c2368f9939819
  					request,
 -					params: {}
 +					params: {},
-+                    locals: { astro: {context} },
++                    locals: { netlify: {context} },
  				});
 -				ctx.locals = { netlify: { context } }
  				// https://docs.netlify.com/edge-functions/api/#return-a-rewrite
